@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 class Home extends React.Component {
-  constructor(){
+  constructor() {
     super()
 
     this.state = {
@@ -19,20 +19,31 @@ class Home extends React.Component {
       .catch(err => console.log(err))
   }
 
+
+
   render() {
     console.log(this.state)
-    
     return (
       <>
         <h1>home</h1>
-        <button>Characters</button>
-        <h2>Episodes:</h2>
-        <select>
-          { this.state.episodes.map(episode => { 
-            return <option key={ episode.id }> { episode.name } </option>
-          })}
+
+        <>
+        <Link to={'/characters'}>Characters</Link>
         
-        </select>
+        </>
+        <h2>Episodes:</h2>
+
+        {/* {`/episodes/${episode.name}`} */}
+        <form>
+          <select>
+            {this.state.episodes.map(episode => {
+              return <option key={episode.id}> {episode.name}</option>
+
+            })}
+          </select>
+          <Link to={'/episodes/:id'}>Go</Link>
+        </form>
+
       </>
 
     )
