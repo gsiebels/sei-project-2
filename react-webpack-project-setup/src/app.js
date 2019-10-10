@@ -12,8 +12,9 @@ const App = () => (
   <BrowserRouter>
     <main>
       <nav>
+
         <Link to="/">Home</Link>
-        {/* <Link to="/episodes/:id">Episode Show page</Link> */}
+        <Link to="/characters">Characters</Link>
       </nav>
       <Switch>
         <Route exact path="/" component={Home} />

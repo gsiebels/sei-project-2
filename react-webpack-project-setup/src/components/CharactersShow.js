@@ -24,7 +24,22 @@ class CharacterShow extends React.Component {
     const { character } = this.state 
     
     return (
-      <h1>{character.name}</h1>
+      <>
+        <h1>{character.name}</h1>
+        <img src={character.image} alt={character.name} />
+        <div>
+          <h4>Species:</h4>
+          <p>{character.species}</p>
+        </div>
+        <div>
+          <h4>Status:</h4>
+          <p>{character.status}</p>
+        </div>
+        <div>
+          
+          
+        </div>
+      </>
     )
   }
 }

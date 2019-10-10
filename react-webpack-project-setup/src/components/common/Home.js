@@ -8,8 +8,12 @@ class Home extends React.Component {
 
     this.state = {
       episodes: [
-      ]
+      ],
+      ep: ''
     }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+
 
   }
 
@@ -19,31 +23,40 @@ class Home extends React.Component {
       .catch(err => console.log(err))
   }
 
+  handleChange(e) {
+    // console.log(event.target.value)
+    this.setState({ ep: e.target.value })
+    console.log(this.state)
+
+  }
+
+  handleSubmit(e) {
+    e.preventDefault()
+    console.log('sub')
+    const a = this.state.episodes.filter(episode => episode.name === this.state.ep).pop().id
+    console.log(a)
+    this.props.history.push(`/episodes/${a}`)
+  }
+
 
 
   render() {
-    console.log(this.state)
+    //console.log(this.state)
+    
     return (
       <>
-        <h1>home</h1>
-
         <>
-        <Link to={'/characters'}>Characters</Link>
-        
+          <Link to={'/characters'}>Characters</Link>     
         </>
         <h2>Episodes:</h2>
-
-        {/* {`/episodes/${episode.name}`} */}
-        <form>
-          <select>
+        <form onSubmit={this.handleSubmit}>
+          <select onChange={this.handleChange} name="episode">
             {this.state.episodes.map(episode => {
               return <option key={episode.id}> {episode.name}</option>
-
             })}
           </select>
-          <Link to={'/episodes/:id'}>Go</Link>
+          <button>Go!</button>        
         </form>
-
       </>
 
     )

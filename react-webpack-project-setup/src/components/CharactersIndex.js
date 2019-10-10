@@ -21,7 +21,7 @@ class Characters extends React.Component {
 
   render() {
     console.log('id check', this.state)
-    const { id } = this.state
+    //const { id } = this.state
     // if (!this.state.results) return null
     return (
       <div>

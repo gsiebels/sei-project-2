@@ -7,22 +7,23 @@ class EpisodeShow extends React.Component{
     super()
 
     this.state = {
-      episode: null
+      episode: ''
     }
   }
 
   componentDidMount() {
     const episodeId = this.props.match.params.id
-    console.log(episodeId)
-    
-    // axios.get(`https://rickandmortyapi.com/api/episode/${episodeId}`)
-    //   .then(res => this.setState({ episode: res.data.results }))
-    //   .catch(err => console.log(err))
+    console.log('hi', episodeId)
+    axios.get(`https://rickandmortyapi.com/api/episode/${episodeId}`)
+      .then(res => this.setState({ episode: res.data }))
+      .catch(err => console.log(err))
   }
   
   render() {
+    console.log('HERE', this.state.episode.name)
+    //const { episode } = this.state
     return (
-      <h1>EpisodeShow</h1>
+      <h1>{this.state.episode.name}</h1>
     )
   }
 }
