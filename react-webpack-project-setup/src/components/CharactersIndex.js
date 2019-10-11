@@ -24,20 +24,19 @@ class Characters extends React.Component {
     //const { id } = this.state
     // if (!this.state.results) return null
     return (
-      <div>
-        <h1>Characters</h1>
-        {this.state.characters.map(character => (
-          <Link key={character.name} to={`/characters/${character.id}`}>
-            <div > {character.name} <img src={character.image} />
-            </div>
-          </Link>
-        ))}
-
-        {/* {this.state.characters.map(character => {
-            return <div key={character.name}> {character.name} <img src={character.image} />
-            </div>
-          })} */}
-      </div>
+      <section className="characterIndex" >
+        <div className="">
+          <h1>Characters</h1>
+          <ul>
+            {this.state.characters.map(character => (
+              <Link key={character.name} to={`/characters/${character.id}`}>
+                <li className="characterDisplay"> {character.name}<img src={character.image} />
+                </li>
+              </Link>
+            ))}
+          </ul>
+        </div>
+      </section>
     )
 
   }

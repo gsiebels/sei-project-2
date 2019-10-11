@@ -23,7 +23,15 @@ class EpisodeShow extends React.Component{
     console.log('HERE', this.state.episode.name)
     //const { episode } = this.state
     return (
-      <h1>{this.state.episode.name}</h1>
+      <section className="episodeShow">
+        <div>
+          <h1>{this.state.episode.name}</h1>
+          <div className="episodeInfo">
+            <p>{this.state.episode.air_date}</p>
+            <p>{this.state.episode.episode}</p>
+          </div>
+        </div>
+      </section>
     )
   }
 }

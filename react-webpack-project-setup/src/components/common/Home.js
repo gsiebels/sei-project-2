@@ -66,32 +66,41 @@ class Home extends React.Component {
 
     
     return (
-      <>
-        <>
-          <Link to={'/characters'}>Characters</Link>     
-        </>
-        <h2>Episodes:</h2>
-        <form onSubmit={this.handleSubmit}>
-          <select onChange={this.handleChange} name="episode">
-            {this.state.episodes.map(episode => {
-              return <option key={episode.id}> {episode.name}</option>
-            })}
-          </select>
-          <button>Go!</button>        
-        </form>
-        <button className="button is-warning" onClick={this.handleClick}>Click me!</button>
-        <div>
-          <p>{this.state.random.name}</p> <img src={this.state.random.image}/>
-          <p>{this.state.random.air_date}</p> 
-          <div>
-            {this.state.images && this.state.images.map(image => {
-              return <img key={image} src={image} />
-            })}
-            
+      <section className="hero">
+
+        <div className="left">
+          <div className="characters">
+            <Link to={'/characters'} className="characterTitle">View characters</Link>     
+          </div>
+
+     
+          <div className="top-left">
+            <h2>Select an episode:</h2>
+            <form className="dropdown" onSubmit={this.handleSubmit}>
+              <select onChange={this.handleChange} name="episode">
+                {this.state.episodes.map(episode => {
+                  return <option key={episode.id}> {episode.name}</option>
+                })}
+              </select>
+              <button className="goButton">Go!</button> 
+            </form>
           </div>
         </div>
-      </>
 
+        <div className="right">  
+          <h2>Let us choose an eposide for you...</h2>   
+          <button className=" randomButton button is-warning" onClick={this.handleClick}>Click me!</button>
+          <div>
+            <p>{this.state.random.name}</p> 
+            <p>{this.state.random.air_date}</p> 
+            <div>
+              {this.state.images && this.state.images.map(image => {
+                return <img className="smallImage" key={image} src={image} />
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
     )
   }
 }

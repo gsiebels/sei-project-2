@@ -1,3 +1,231 @@
-body {
-  background-color: black;
+$buttonsColor : rgb(138, 138, 138);
+$font: 'Carter One', cursive;
+
+nav {
+  background-image: url('http://backgrounddownload.com/wp-content/uploads/2018/09/rick-and-morty-portal-background-5.png');
+  height: 40px;
+  text-align: left;
+  font-family: $font;
+  font-size: 30px;
 }
+
+
+.hero {
+  background-image: url(./assets/rick-and-morty-background.png);
+  background-repeat: no-repeat;
+  // background-color: rgb(251, 155, 155);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  
+
+  .right {
+    //  background-image: url(./assets/rick-and-morty-background.png);
+    background-color: rgba(0, 0, 0, 0.205);
+     background-size: cover;
+     background-position: center;
+     text-align: center;
+
+     h2 {
+       margin: 70px 70px 30px 70px;
+       font-family: $font;
+       font-size: 50px;
+     }
+
+      p {
+        font-family: $font;
+        color: white;
+        text-align: center;
+        font-size: 40px;
+     }
+     
+    .randomButton{
+      justify-items: center;
+      align-self: center;
+      margin: 0 450px 0 ;  
+    }
+
+    .smallImage {
+      padding: 0;
+      margin: 7px;
+      height: 80px;
+      width: 80px;
+    }
+  }
+  
+  .left{
+    display: flex;
+    // background-color: grey;
+    flex-direction: column-reverse;
+    font-family: $font;
+    font-size: 50px;
+
+    .characterTitle {
+      color: rgba(255, 255, 255, 0.541);
+    }
+
+    .characterTitle:hover {
+      color: white;
+    }
+
+    .characters {
+      background-color: rgba(40, 65, 146, 0.315);
+      // background-image: url(./assets/characters-background.jpg); 
+      background-position: center;
+      background-size: cover;
+      font-size: 50px;
+      text-align: center; 
+      padding: 37% 20%;
+    }
+
+    .top-left {
+      background-color: rgba(42, 124, 66, 0.301);
+      // background-image: url(./assets/earth-background.png);
+      background-position: center;
+      background-size: cover;
+      flex-direction: column;
+      padding: 30% 20%;
+
+      h2 {
+        color: white;
+        font-size: 20px;
+      }
+
+      .dropdown {
+        flex-direction: column;
+        margin-left: 10px;
+      }
+
+      .goButton {
+        padding: 5px;
+        margin: 5px;
+      }
+    }
+  }
+}
+
+.characterIndex {
+  background-image: url('https://wallpaperboat.com/wp-content/uploads/2019/04/rick-and-morty-wallpaper-portal-wallpaper-001.jpg');
+  display: flex;
+  font-family: $font;
+  color: white;
+  text-align: center;
+  font-size: 70px;
+  text-shadow: 2px 2px 3px black;
+  
+  
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    font-size: 18px;
+    text-shadow: none;
+    margin-left: 100px;
+  }
+  
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.719);
+    width: 250px;
+    height: 300px;
+
+  }
+  li:hover{
+      color:white;
+      font-size: 20px;
+    }
+
+  img {
+    width: 200px;
+    height: 200px;
+    margin: 20px 10px;
+  }
+}
+
+.character-show {
+
+  background-image: url('http://i.imgur.com/zOrHWVE.jpg');
+  background-size: cover;
+  height: 100vh;
+
+  .characterInfo {
+    display: flex;
+    flex-direction: row;
+
+    .characterDetails {
+      padding: 100px 20px;
+    }
+  }
+
+  h1 {
+    font-family: $font;
+    color: white;
+    text-align: left;
+    font-size: 70px;
+    text-shadow: 2px 2px 3px black;
+    margin-left: 100px;
+    padding-top: 50px
+  }
+
+  img {
+    margin: 80px 0px 0px 100px;
+    height: 400px;
+    width: 400px;
+    padding: 0;
+    
+  }
+
+  h4 {
+    font-family: $font;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 20px;
+    // padding-top: 40px;
+  }
+
+  p {
+    font-family: $font;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+
+}
+
+.episodeShow {
+  background-image: url(./assets/earth-background.png);
+  background-size: cover;
+  height: 95vh;
+
+  h1{
+    font-family: $font;
+    color: white;
+    text-align: center;
+    font-size: 100px;
+  }
+
+  p {
+    font-family:$font;
+    color:white;
+    text-align: center;
+    font-size: 70px;
+    padding: 0 200px;
+    
+    
+  }
+
+  .episodeInfo {
+    padding-top: 100px;
+    text-shadow: 2px 2px 5px black;
+  }
+
+}
+
+
+
