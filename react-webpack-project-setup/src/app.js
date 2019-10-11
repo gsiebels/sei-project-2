@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
+import 'bulma'
+import '../src/style.scss'
 
 import Home from './components/common/Home'
 import EpisodeShow from './components/EpisodeShow'
