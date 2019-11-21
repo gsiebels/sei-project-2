@@ -4,6 +4,6 @@ const port = 4000
 
 app.use(express.static(`${__dirname}/dist`))
 
-app.use('/*', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
+app.get('/*', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 
 app.listen(port, () => console.log(`running on port ${port}`))

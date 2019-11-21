@@ -33,7 +33,6 @@ class Home extends React.Component {
   }
 
   handleChange(e) {
-    // console.log(event.target.value)
     this.setState({ ep: e.target.value })
   }
 
@@ -63,8 +62,6 @@ class Home extends React.Component {
   }
 
   render() {
-
-    
     return (
       <section className="hero">
 

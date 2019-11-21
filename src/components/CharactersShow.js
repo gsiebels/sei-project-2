@@ -13,16 +13,13 @@ class CharacterShow extends React.Component {
 
   componentDidMount() {
     const characterId = this.props.match.params.id
-    // console.log('HEREEEEE', characterId)
     axios.get(`https://rickandmortyapi.com/api/character/${characterId}`)
       .then(res => this.setState({ character: res.data }))
       .catch(err => console.log(err))
       
   }
   render() {
-    console.log(this.state)
     const { character } = this.state 
-    
     return (
       <section className="character-show">
         <h1>{character.name}</h1>
@@ -39,7 +36,6 @@ class CharacterShow extends React.Component {
             </div>
           </div>
         </div>
-      
       </section>
     )
   }

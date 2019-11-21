@@ -21,7 +21,6 @@ class EpisodeShow extends React.Component{
   
   render() {
     console.log('HERE', this.state.episode.name)
-    //const { episode } = this.state
     return (
       <section className="episodeShow">
         <div>

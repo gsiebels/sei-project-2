@@ -10,7 +10,6 @@ import CharactersIndex from './components/CharactersIndex'
 import CharactersShow from './components/CharactersShow'
 
 
-
 const App = () => (
   <BrowserRouter>
     <main>
@@ -27,7 +26,6 @@ const App = () => (
     </main> 
   </BrowserRouter>
 )
-
 
 ReactDOM.render(
   <App />,
