@@ -7,7 +7,7 @@
 
 This page uses a Publick Rick and Morty API. It's divided into 3 sections. The main section on the right has a button that generates a random episode and displays the characters that were on the episode. The top left section allows you to search for a specific episode, finally the bottom left section takes you to a page where you can see the characters with more detail. 
 
-This was a project assigned to me by General Assembly during a software enginerring immersive course. The purpose of the project was to solidify the skills we learnt in the second module. This inluded learning react and interacting with public API's. We were to put them to use in a project of our choice.
+This was a project assigned to me by General Assembly during a software engineering immersive course. The purpose of the project was to solidify the skills we learned in the second module. This included learning react and interacting with public APIs. We were to put them to use in a project of our choice.
 
 After learning react for a week and covering the use of API's in the same amount of time we were given a day and a half to complete this project. I worked on this pair programming with another student on the course.
 
