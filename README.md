@@ -11,7 +11,7 @@ This was a project assigned to me by General Assembly during a software engineer
 
 After learning react for a week and covering the use of API's in the same amount of time we were given a day and a half to complete this project. I worked on this pair programming with another student on the course.
 
- # Bouilt With
+ # Built With
  
 - HTML5
 - SCSS
